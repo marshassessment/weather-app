@@ -1,0 +1,20 @@
+<div class="content" role="main">
+    <h2>Weather API Integration and Location Display</h2>
+    <p>Current & Forecast weather data collection</p>
+    <mat-form-field appearance="fill" style="margin-top: 50px;">
+        <mat-label>Select city</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let city of cities" [value]="city.value">
+            {{city.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <section>
+        <span class="example-button-row"><a routerLink="/current-weather"><button mat-raised-button>Current
+                    Weather</button></a></span>
+        <span class="example-button-row"><a routerLink="/forecast"><button mat-raised-button>Forecast
+                    Weather</button></a></span>
+        <span class="example-button-row"><a routerLink="/air-pollution"><button mat-raised-button>Air
+                    Pollution</button></a></span>
+    </section>
+</div>
